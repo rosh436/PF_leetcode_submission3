@@ -7,7 +7,7 @@ int main() {
     printf("Enter size of matrix (n x n): ");
     scanf("%d", &n);
 
-    int matrix[n][n];  // VLA
+    int matrix[n][n];  
 
     // Input each value with prompting
     for (i = 0; i < n; i++) {
@@ -17,7 +17,7 @@ int main() {
         }
     }
 
-    // Step 1: Transpose
+    
     for (i = 0; i < n; i++) {
         for (j = i + 1; j < n; j++) {
             temp = matrix[i][j];
@@ -26,7 +26,7 @@ int main() {
         }
     }
 
-    // Step 2: Reverse each row
+
     for (i = 0; i < n; i++) {
         for (j = 0; j < n / 2; j++) {
             temp = matrix[i][j];
@@ -35,7 +35,7 @@ int main() {
         }
     }
 
-    // Output rotated matrix
+   
     printf("\nRotated Matrix:\n");
     for (i = 0; i < n; i++) {
         for (j = 0; j < n; j++) {
@@ -46,4 +46,5 @@ int main() {
 
     return 0;
 }
+
 
